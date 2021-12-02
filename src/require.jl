@@ -46,7 +46,7 @@ function err(@nospecialize(f), listener::Module, modname::String)
   try
     f()
   catch exc
-    @warn "Error requiring `$modname` from `$listener`" exception=(exc,catch_backtrace())
+    nothing
   end
 end
 
